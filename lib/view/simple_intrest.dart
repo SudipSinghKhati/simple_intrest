@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 class SimpleIntrest extends StatefulWidget {
@@ -10,6 +8,10 @@ class SimpleIntrest extends StatefulWidget {
 }
 
 class _SimpleIntrestState extends State<SimpleIntrest> {
+  double principle = 0;
+  double rate = 0;
+  double time = 0;
+  double result = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,6 +29,9 @@ class _SimpleIntrestState extends State<SimpleIntrest> {
                   height: 10.0,
                 ),
                 TextField(
+                  onChanged: (value) {
+                    principle = double.parse(value);
+                  },
                   decoration: InputDecoration(
                     hintText: 'Enter Principal',
                     border: OutlineInputBorder(
@@ -38,6 +43,9 @@ class _SimpleIntrestState extends State<SimpleIntrest> {
                   height: 10.0,
                 ),
                 TextField(
+                  onChanged: (value) {
+                    rate = double.parse(value);
+                  },
                   decoration: InputDecoration(
                       hintText: 'Enter rate',
                       border: OutlineInputBorder(
@@ -48,6 +56,9 @@ class _SimpleIntrestState extends State<SimpleIntrest> {
                   height: 10.0,
                 ),
                 TextField(
+                  onChanged: (value) {
+                    time = double.parse(value);
+                  },
                   decoration: InputDecoration(
                     hintText: 'Enter time',
                     border: OutlineInputBorder(
@@ -61,7 +72,11 @@ class _SimpleIntrestState extends State<SimpleIntrest> {
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                        result = principle * rate * time / 100;
+                      });
+                    },
                     child: Text('CALCULATE'),
                   ),
                 ),
@@ -69,7 +84,7 @@ class _SimpleIntrestState extends State<SimpleIntrest> {
                   height: 10.0,
                 ),
                 Text(
-                  'Simple interest is 0',
+                  'Simple interest is $result',
                   style: TextStyle(
                       fontSize: 25,
                       fontWeight: FontWeight.bold,
