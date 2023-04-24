@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simple_intrest/model/Math.dart';
 
 class Add extends StatefulWidget {
   const Add({super.key});
@@ -11,6 +12,22 @@ class _AddState extends State<Add> {
   double firstNumber = 0.0;
   double secondNumber = 0.0;
   double result = 0.0;
+  // var math = Math();
+  late Math math;
+  void add() {
+    math = Math();
+    setState(() {
+      result = math.add(firstNumber, secondNumber);
+    });
+  }
+
+  void sub() {
+    math = Math();
+    setState(() {
+      result = math.sub(firstNumber, secondNumber);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -74,8 +91,7 @@ class _AddState extends State<Add> {
                   child: ElevatedButton(
                     onPressed: () {
                       setState(() {
-                        result = firstNumber + secondNumber;
-                        print(result);
+                        add();
                       });
                     },
                     child: const Text('Add'),
@@ -87,9 +103,7 @@ class _AddState extends State<Add> {
                   //ElevatedButton helps to make button
                   child: ElevatedButton(
                     onPressed: () {
-                      setState(() {
-                        result = firstNumber - secondNumber;
-                      });
+                      sub();
                     },
                     child: const Text('SUB'),
                   ),
