@@ -37,7 +37,7 @@ class DashboardView extends StatelessWidget {
               },
               child: const Text('Area Of Circle'),
             ),
-              SizedBox(
+            SizedBox(
               width: double.infinity,
               child: ElevatedButton(
                   onPressed: () {
@@ -45,13 +45,21 @@ class DashboardView extends StatelessWidget {
                   },
                   child: const Text('Display Name')),
             ),
-              SizedBox(
+            SizedBox(
               width: double.infinity,
               child: ElevatedButton(
                   onPressed: () {
                     Navigator.pushNamed(context, '/reachTextRoute');
                   },
                   child: const Text('Reach Text')),
+            ),
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/columnRoute');
+                  },
+                  child: const Text('Column')),
             ),
           ],
         ),
