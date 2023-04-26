@@ -16,7 +16,7 @@ class _SimpleIntrestState extends State<SimpleIntrest> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Simple Interest '),
+        title: const Text('Simple Interest '),
         centerTitle: true,
       ),
       body: SafeArea(
@@ -25,7 +25,7 @@ class _SimpleIntrestState extends State<SimpleIntrest> {
             padding: const EdgeInsets.all(25.0),
             child: Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 10.0,
                 ),
                 TextField(
@@ -39,7 +39,7 @@ class _SimpleIntrestState extends State<SimpleIntrest> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10.0,
                 ),
                 TextField(
@@ -52,7 +52,7 @@ class _SimpleIntrestState extends State<SimpleIntrest> {
                         borderRadius: BorderRadius.circular(18.0),
                       )),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10.0,
                 ),
                 TextField(
@@ -66,7 +66,7 @@ class _SimpleIntrestState extends State<SimpleIntrest> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10.0,
                 ),
                 SizedBox(
@@ -77,15 +77,15 @@ class _SimpleIntrestState extends State<SimpleIntrest> {
                         result = principle * rate * time / 100;
                       });
                     },
-                    child: Text('CALCULATE'),
+                    child: const Text('CALCULATE'),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10.0,
                 ),
                 Text(
                   'Simple interest is $result',
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontSize: 25,
                       fontWeight: FontWeight.bold,
                       fontStyle: FontStyle.italic),
