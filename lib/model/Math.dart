@@ -4,6 +4,7 @@ class Math {
   }
 
   double sub(double firstNumber, double secondNumber) {
-    return firstNumber + secondNumber;
+    return firstNumber - secondNumber;
+
   }
 }

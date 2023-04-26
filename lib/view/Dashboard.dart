@@ -45,6 +45,14 @@ class DashboardView extends StatelessWidget {
                   },
                   child: const Text('Display Name')),
             ),
+              SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/reachTextRoute');
+                  },
+                  child: const Text('Reach Text')),
+            ),
           ],
         ),
       ),

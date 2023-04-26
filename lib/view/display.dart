@@ -11,7 +11,7 @@ class display extends StatefulWidget {
 class _displayState extends State<display> {
   String friendName = 'Click Me';
   DisplayName displayName = DisplayName();
-  late Ds;
+
   void getName() {
     // inita
     setState(() {
