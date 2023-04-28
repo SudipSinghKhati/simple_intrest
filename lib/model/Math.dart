@@ -1,9 +1,9 @@
 class Math {
-  double add(double firstNumber, double secondNumber) {
+int add(int firstNumber, int secondNumber) {
     return firstNumber + secondNumber;
   }
 
-  double sub(double firstNumber, double secondNumber) {
+ int sub(int firstNumber, int secondNumber) {
     return firstNumber - secondNumber;
 
   }
