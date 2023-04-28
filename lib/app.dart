@@ -22,7 +22,7 @@ class App extends StatelessWidget {
           '/AOCRoute': (context) => const circleView(),
           '/displayNameRoute':(context) => const display(),
           '/reachTextRoute':(context) => const reachTextView(),
-          '/columnRoute':(context) => const columnView(),
+          '/columnRoute':(context) => const ColumnView(),
         });
   }
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class columnView extends StatelessWidget {
-  const columnView({super.key});
+class ColumnView extends StatelessWidget {
+  const ColumnView({super.key});
 
   @override
   Widget build(BuildContext context) {
