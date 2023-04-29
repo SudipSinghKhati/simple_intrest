@@ -1,10 +1,17 @@
-class Math {
-int add(int firstNumber, int secondNumber) {
+class Mathmatics {
+  double add(double firstNumber, double secondNumber) {
     return firstNumber + secondNumber;
   }
 
- int sub(int firstNumber, int secondNumber) {
+  double sub(double firstNumber, double secondNumber) {
     return firstNumber - secondNumber;
+  }
 
+  double mult(double firstNumber, double secondNumber) {
+    return firstNumber * secondNumber;
+  }
+
+  double div(double firstNumber, double secondNumber) {
+    return firstNumber / secondNumber;
   }
 }

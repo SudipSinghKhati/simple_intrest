@@ -1,28 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:simple_intrest/model/Math.dart';
+import 'package:simple_intrest/model/math.dart';
 
-class Add extends StatefulWidget {
-  const Add({super.key});
+class MathmaticsView extends StatefulWidget {
+  const MathmaticsView({super.key});
 
   @override
-  State<Add> createState() => _AddState();
+  State<MathmaticsView> createState() => _MathmaticsViewState();
 }
 
-class _AddState extends State<Add> {
+class _MathmaticsViewState extends State<MathmaticsView> {
   final firstController = TextEditingController();
   final secondController = TextEditingController();
-  int result = 0;
+  double result = 0;
   // var math = Math();
-  state() {
-    firstController.text = '67';
-    secondController.text = '40';
-  }
+  // state() {
+  //   firstController.text = '67';
+  //   secondController.text = '40';
+  // }
 
-  @override
-  void initState() {
-    state();
-    super.initState();
-  }
+  // @override
+  // void initState() {
+  //   state();
+  //   super.initState();
+  // }
 
   @override
   void dispose() {
@@ -31,20 +31,36 @@ class _AddState extends State<Add> {
     super.dispose();
   }
 
-  late Math math;
+  late Mathmatics math;
   void add() {
-    math = Math();
+    math = Mathmatics();
     setState(() {
-      result = math.add(
-          int.parse(firstController.text), int.parse(secondController.text));
+      result = math.add(double.parse(firstController.text),
+          double.parse(secondController.text));
     });
   }
 
   void sub() {
-    math = Math();
+    math = Mathmatics();
     setState(() {
-      result = math.sub(
-          int.parse(firstController.text), int.parse(secondController.text));
+      result = math.sub(double.parse(firstController.text),
+          double.parse(secondController.text));
+    });
+  }
+
+  void mul() {
+    math = Mathmatics();
+    setState(() {
+      result = math.mult(double.parse(firstController.text),
+          double.parse(secondController.text));
+    });
+  }
+
+  void div() {
+    math = Mathmatics();
+    setState(() {
+      result = math.div(double.parse(firstController.text),
+          double.parse(secondController.text));
     });
   }
 
@@ -57,7 +73,7 @@ class _AddState extends State<Add> {
         //appBar helps to show menu bar
         appBar: AppBar(
           //tilte helps to helps write text on the menu bar
-          title: const Text('Hello'),
+          title: const Text('Mathmatics'),
           //center Title  helps to make title at the center of the menu bar
           centerTitle: true,
           //elvation helps to increase/ decrease the shadow to menu bar
@@ -146,6 +162,26 @@ class _AddState extends State<Add> {
                       },
                       child: const Text('SUB'),
                     ),
+                  ),
+                  SizedBox(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                        onPressed: () {
+                          if (mykey.currentState!.validate()) {
+                            mul();
+                          }
+                        },
+                        child: const Text("Multiply")),
+                  ),
+                  SizedBox(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                        onPressed: () {
+                          if (mykey.currentState!.validate()) {
+                            div();
+                          }
+                        },
+                        child: const Text("Divide")),
                   ),
                   const SizedBox(
                     height: 10,

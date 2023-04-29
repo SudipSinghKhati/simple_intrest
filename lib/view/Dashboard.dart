@@ -26,9 +26,9 @@ class DashboardView extends StatelessWidget {
             const SizedBox(height: 8),
             ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/addRoute');
+                Navigator.pushNamed(context, '/mathRoute');
               },
-              child: const Text('add'),
+              child: const Text('Mathamatics'),
             ),
             const SizedBox(height: 8),
             ElevatedButton(
