@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../common/show_my_message.dart';
+
 class MediaQueryView extends StatefulWidget {
   const MediaQueryView({super.key});
 
@@ -8,15 +10,6 @@ class MediaQueryView extends StatefulWidget {
 }
 
 class _MediaQueryViewState extends State<MediaQueryView> {
-  void showMessage(String message) {
-    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-      backgroundColor: Colors.green,
-      content: Text(message),
-      duration: const Duration(seconds: 2),
-      behavior: SnackBarBehavior.floating,
-    ));
-  }
-
   // void showMessage1() {
   @override
   Widget build(BuildContext context) {
@@ -36,7 +29,7 @@ class _MediaQueryViewState extends State<MediaQueryView> {
               color: Colors.amber,
               child: ElevatedButton(
                   onPressed: () {
-                    showMessage("Hello");
+                    showMessage(context, "Hello", color: Colors.green);
                   },
                   child: const Text('Click Me')),
             ),
@@ -47,7 +40,7 @@ class _MediaQueryViewState extends State<MediaQueryView> {
               color: Colors.black,
               child: ElevatedButton(
                   onPressed: () {
-                    showMessage("Hello 159");
+                    showMessage(context, "Hello 159");
                   },
                   child: const Text('Click me')),
             ),
