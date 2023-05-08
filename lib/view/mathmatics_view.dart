@@ -39,11 +39,11 @@ class _MathmaticsViewState extends State<MathmaticsView> {
       result = math.add(double.parse(firstController.text),
           double.parse(secondController.text));
     });
-    Navigator.pushNamed(
-      context,
-      '/outputRoute',
-      arguments: result,
-    );
+    // Navigator.pushNamed(
+    //   context,
+    //   '/outputRoute',
+    //   arguments: result,
+    // );
   }
 
   void sub() {
@@ -52,7 +52,7 @@ class _MathmaticsViewState extends State<MathmaticsView> {
       result = math.sub(double.parse(firstController.text),
           double.parse(secondController.text));
     });
-    Navigator.pushNamed(context, '/outputRoute', arguments: result);
+    // Navigator.pushNamed(context, '/outputRoute', arguments: result);
   }
 
   void mul() {
@@ -61,7 +61,7 @@ class _MathmaticsViewState extends State<MathmaticsView> {
       result = math.mult(double.parse(firstController.text),
           double.parse(secondController.text));
     });
-    Navigator.pushNamed(context, '/outputRoute', arguments: result);
+    // Navigator.pushNamed(context, '/outputRoute', arguments: result);
   }
 
   void div() {
@@ -70,11 +70,11 @@ class _MathmaticsViewState extends State<MathmaticsView> {
       result = math.div(double.parse(firstController.text),
           double.parse(secondController.text));
     });
-    Navigator.pushNamed(
-      context,
-      '/outputRoute',
-      arguments: result,
-    );
+    // Navigator.pushNamed(
+    //   context,
+    //   '/outputRoute',
+    //   arguments: result,
+    // );
   }
 
   //helps to check form state
@@ -158,7 +158,8 @@ class _MathmaticsViewState extends State<MathmaticsView> {
                         //helps to show error message while pressing the butoon
                         if (mykey.currentState!.validate()) {
                           add();
-                          showMessage(context, 'Add', color: Colors.green);
+                          showMessage(context, 'Result is $result',
+                              color: Colors.green);
                         }
                       },
                       child: const Text('Add'),
@@ -172,7 +173,8 @@ class _MathmaticsViewState extends State<MathmaticsView> {
                       onPressed: () {
                         if (mykey.currentState!.validate()) {
                           sub();
-                          showMessage(context, 'Subtract', color: Colors.green);
+                          showMessage(context, 'The resutle is $result',
+                              color: Colors.red);
                         }
                       },
                       child: const Text('SUB'),
@@ -184,8 +186,8 @@ class _MathmaticsViewState extends State<MathmaticsView> {
                         onPressed: () {
                           if (mykey.currentState!.validate()) {
                             mul();
-                            showMessage(context, 'Multiply',
-                                color: Colors.green);
+                            showMessage(context, 'The result is $result',
+                                color: Colors.blue);
                           }
                         },
                         child: const Text("Multiply")),
@@ -196,7 +198,8 @@ class _MathmaticsViewState extends State<MathmaticsView> {
                         onPressed: () {
                           if (mykey.currentState!.validate()) {
                             div();
-                            showMessage(context, 'Divide', color: Colors.green);
+                            showMessage(context, 'The result is $result',
+                                color: Colors.black);
                           }
                         },
                         child: const Text("Divide")),
