@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:simple_intrest/view/Dashboard.dart';
 import 'package:simple_intrest/view/area_of_circle.dart';
+import 'package:simple_intrest/view/class_exercise.dart';
 import 'package:simple_intrest/view/column_view.dart';
 import 'package:simple_intrest/view/container_view.dart';
 import 'package:simple_intrest/view/display.dart';
@@ -31,6 +32,7 @@ class App extends StatelessWidget {
           '/containerRoute': (context) => const ContainerView(),
           '/loadimageRoute':(context) => const LoadImageView(),
           '/mediaQueryRoute': (context) => const MediaQueryView(),
+          '/classWorkRoute':(contex)=> const ClassExerciseView(),
         });
   }
 }

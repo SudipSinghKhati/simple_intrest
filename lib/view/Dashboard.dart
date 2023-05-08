@@ -93,6 +93,14 @@ class DashboardView extends StatelessWidget {
                   },
                   child: const Text('Media Query')),
             ),
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/classWorkRoute');
+                  },
+                  child: const Text('Class Work')),
+            ),
           ],
         ),
       ),
