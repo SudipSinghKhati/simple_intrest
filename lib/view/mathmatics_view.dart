@@ -38,6 +38,11 @@ class _MathmaticsViewState extends State<MathmaticsView> {
       result = math.add(double.parse(firstController.text),
           double.parse(secondController.text));
     });
+    Navigator.pushNamed(
+      context,
+      '/outputRoute',
+      arguments: result,
+    );
   }
 
   void sub() {
@@ -46,6 +51,7 @@ class _MathmaticsViewState extends State<MathmaticsView> {
       result = math.sub(double.parse(firstController.text),
           double.parse(secondController.text));
     });
+    Navigator.pushNamed(context, '/outputRoute', arguments: result);
   }
 
   void mul() {
@@ -54,6 +60,7 @@ class _MathmaticsViewState extends State<MathmaticsView> {
       result = math.mult(double.parse(firstController.text),
           double.parse(secondController.text));
     });
+    Navigator.pushNamed(context, '/outputRoute', arguments: result);
   }
 
   void div() {
@@ -62,6 +69,11 @@ class _MathmaticsViewState extends State<MathmaticsView> {
       result = math.div(double.parse(firstController.text),
           double.parse(secondController.text));
     });
+    Navigator.pushNamed(
+      context,
+      '/outputRoute',
+      arguments: result,
+    );
   }
 
   //helps to check form state
