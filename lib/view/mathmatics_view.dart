@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simple_intrest/common/show_my_message.dart';
 import 'package:simple_intrest/model/math.dart';
 
 class MathmaticsView extends StatefulWidget {
@@ -157,6 +158,7 @@ class _MathmaticsViewState extends State<MathmaticsView> {
                         //helps to show error message while pressing the butoon
                         if (mykey.currentState!.validate()) {
                           add();
+                          showMessage(context, 'Add', color: Colors.green);
                         }
                       },
                       child: const Text('Add'),
@@ -170,6 +172,7 @@ class _MathmaticsViewState extends State<MathmaticsView> {
                       onPressed: () {
                         if (mykey.currentState!.validate()) {
                           sub();
+                          showMessage(context, 'Subtract', color: Colors.green);
                         }
                       },
                       child: const Text('SUB'),
@@ -181,6 +184,8 @@ class _MathmaticsViewState extends State<MathmaticsView> {
                         onPressed: () {
                           if (mykey.currentState!.validate()) {
                             mul();
+                            showMessage(context, 'Multiply',
+                                color: Colors.green);
                           }
                         },
                         child: const Text("Multiply")),
@@ -191,6 +196,7 @@ class _MathmaticsViewState extends State<MathmaticsView> {
                         onPressed: () {
                           if (mykey.currentState!.validate()) {
                             div();
+                            showMessage(context, 'Divide', color: Colors.green);
                           }
                         },
                         child: const Text("Divide")),
