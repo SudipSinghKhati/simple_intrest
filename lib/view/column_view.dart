@@ -11,12 +11,12 @@ class ColumnView extends StatelessWidget {
         centerTitle: true,
         elevation: 0,
       ),
-      body: SafeArea(
+      body: const SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Row(
-              children: const [
+              children: [
                 Icon(
                   Icons.star,
                   size: 50,
@@ -34,9 +34,9 @@ class ColumnView extends StatelessWidget {
                 ),
               ],
             ),
-            const Spacer(),
+            Spacer(),
             Row(
-              children: const [
+              children: [
                 Icon(
                   Icons.star,
                   size: 50,
